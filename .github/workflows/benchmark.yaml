@@ -1,0 +1,12 @@
+name: YABS benchmark
+
+on:
+  push
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: benchmark
+        run: curl -sL https://yabs.sh | bash -s -- -flags
